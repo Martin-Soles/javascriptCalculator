@@ -1,0 +1,85 @@
+body{
+    background-color: black;
+}
+.calculator{
+    margin-left:auto ;
+    margin-right: auto;
+    display: block;
+    width: 400px;
+    border: white, solid 2px;
+    border-radius: 10px;
+    padding: 1em;
+}
+#calculator-dislpay{
+    color: white;
+    font-size: 3em;
+    background-color: rgba(204, 125, 204, 0.651);
+    padding: .3em;
+    border-radius: 10px;
+    border: rgb(220, 36, 226), solid 2px;
+}
+
+button{
+    color: white;
+    border: none;
+    display: block;
+}
+#calculator-dislpay{
+
+    height: 3em;
+}
+.calculator-keyboard  button{
+    border-radius: 100%;
+    width: 2em; 
+    height: 2em;
+    font-size: 2em;
+}
+.calculator-keyboard-operands > button{
+    background-color: rgb(64, 144, 209);
+}
+.calculator-keyboard-operators > button{
+    background-color: green;
+}
+.calculator-keyboard-funcionalities > button{
+    background-color:rgb(78, 94, 88) ;
+}
+.calculator-keyboard-operators{
+    display: flex;
+    flex-direction: column;
+    grid-area: operators;
+}
+
+.calculator-keyboard-operands{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-area: operands;
+
+}
+.calculator-keyboard-funcionalities{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-area: funcionalities;
+}
+.calculator-keyboard > *{
+    gap: .2em;
+    align-items: center;
+    justify-items: center;
+}
+#equal{
+    background-color:rgb(78, 94, 88) ;
+}
+.calculator-keyboard-operators{
+    padding-top: .3em;
+}
+.calculator-keyboard {
+    display: grid;
+    grid-template-areas:
+        'funcionalities funcionalities operators'
+        'operands operands operators'
+        'operands operands operators'
+        'operands operands operators'
+        'operands operands operators';
+    gap: 1em;
+}
